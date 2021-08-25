@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#WALLPAPER
+sudo cp wallpapers/* /usr/share/backgrounds
+
+#INITIALIZATION
+mkdir /home/$USER/tools
+cd /home/$USER/tools
+
+#PREREQUISITES
+sudo apt-get install default-jdk gdb gcc-multilib python3 python3-pip git radare2 strace ltrace patchelf -y
+
+#TOOLS
+wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+pip3 install capstone unicorn keystone-engine ropper
+
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.0_build/ghidra_10.0_PUBLIC_20210621.zip
+unzip ghidra_10.0_PUBLIC_20210621.zip
+rm ghidra_10.0_PUBLIC_20210621.zip
+
+wget https://out7.hex-rays.com/files/idafree76_linux.run
+chmod +x idafree76_linux.run
+./idafree76_linux.run
+rm idafree76_linux.run
+
+wget https://github.com/rizinorg/cutter/releases/download/v2.0.2/Cutter-v2.0.2-x64.Linux.appimage
+chmod +x Cutter-v2.0.2-x64.Linux.appimage
+
+#ALIASES
+echo "alias ghidra="/home/$USER/tools/ghidra_10.0_PUBLIC/ghidraRun"">> /home/$USER/.zshrc
+echo "alias ghidra="/home/$USER/tools/ghidra_10.0_PUBLIC/ghidraRun"" >> /home/$USER/.bashrc
+
+echo "alias cutter="/home/$USER/tools/Cutter-v2.0.2-x64.Linux.appimage"" >> /home/$USER/.zshrc
+echo "alias cutter="/home/$USER/tools/Cutter-v2.0.2-x64.Linux.appimage"" >> /home/$USER/.bashrc
+
+gsettings set org.gnome.desktop.background picture-uri file:////usr/share/backgrounds/reaper-vm-1.png
+
+echo "Installation Completed. Please restart your computer !"
