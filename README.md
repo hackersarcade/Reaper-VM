@@ -1,6 +1,6 @@
 # REAPER VM
 
- An installation script that helps you instantly setup a **reverse engineering** enviroment.
+ An installation script that helps you instantly setup a **reverse engineering** environment.
 
 ## NOTE
 
