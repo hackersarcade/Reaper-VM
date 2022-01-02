@@ -9,7 +9,7 @@ Do not run this script on your main (host) os. It is highly recommended that you
 ## INSTALLATION
 
 ```sh
-git clone https://github.com/vxsparsh/Reaper-VM.git
+git clone https://github.com/hackersarcade/Reaper-VM.git
 cd Reaper-VM
 chmod +x install
 ./install
