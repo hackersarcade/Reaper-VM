@@ -14,7 +14,7 @@ sudo apt-get install default-jdk gdb gcc-multilib python3 python3-pip git radare
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 pip3 install capstone unicorn keystone-engine ropper
 
-wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.0_build/ghidra_10.0_PUBLIC_20210621.zip
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.1.2_build/ghidra_10.1.2_PUBLIC_20220125.zip
 unzip ghidra_10.0_PUBLIC_20210621.zip
 rm ghidra_10.0_PUBLIC_20210621.zip
 
@@ -23,7 +23,7 @@ chmod +x idafree76_linux.run
 ./idafree76_linux.run
 rm idafree76_linux.run
 
-wget https://github.com/rizinorg/cutter/releases/download/v2.0.2/Cutter-v2.0.2-x64.Linux.appimage
+wget https://github.com/rizinorg/cutter/releases/download/v2.0.5/Cutter-v2.0.5-x64.Linux.AppImage
 chmod +x Cutter-v2.0.2-x64.Linux.appimage
 
 #ALIASES
