@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#WALLPAPER
-sudo cp wallpapers/* /usr/share/backgrounds
-
 #INITIALIZATION
 mkdir /home/$USER/tools
 cd /home/$USER/tools
